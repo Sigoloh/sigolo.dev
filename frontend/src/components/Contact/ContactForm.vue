@@ -27,8 +27,12 @@
 </template>
 
 <script>
-import emailjs from '@emailjs/browser';
+import axios from 'axios';
 import { reactive } from 'vue';
+
+const instance = axios.create({
+  baseURL: 'https://api.emailjs.com/api/v1.0/email',
+});
 
 export default {
   setup() {
@@ -38,16 +42,19 @@ export default {
       message: '',
     });
 
-    function sendEmail() {
+    async function sendEmail() {
       console.log(state);
-      emailjs.init('user_m63ffj0CXBtPVXoynOtiz');
-      emailjs.send('service_qf6866x', 'template_fh39yda', state)
-        .then((result) => {
-          console.log('SUCCESS!', result.text);
-        }, (error) => {
-          console.log('FAILED...', error.text);
-        });
-      console.log('Passou');
+      await instance.post('/send', {
+        service_id: 'service_qf6866x',
+        template_id: 'template_fh39yda',
+        user_id: 'user_m63ffj0CXBtPVXoynOtiz',
+        template_params: {
+          userName: state.userName,
+          userEmail: state.userEmail,
+          message: state.message,
+        },
+      });
+      console.log('enviado');
     }
     return { state, sendEmail };
   },
