@@ -37,7 +37,7 @@ v-model="state.userEmail"
 
 <script>
 import axios from 'axios';
-import { onMounted, reactive } from 'vue';
+import { reactive } from 'vue';
 
 const instance = axios.create({
   baseURL: 'https://api.emailjs.com/api/v1.0/email',
