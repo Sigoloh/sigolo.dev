@@ -5,24 +5,18 @@
       <main-box class="sideBar"/>
       <div class="content">
         <section>
-          <h1>sigolo.dev</h1>
-          <h2>Um hub? Um currículo?</h2>
+          <h1>Portfólio</h1>
+          <h2>As coisas que eu faço</h2>
           <hr/>
           <div class="text">
-           <p>  Eu sou um programador desde que me lembro. Meu primeiro contato com programação
-            foi logo aos 10 anos,
-           quando vendo tutoriais de programação em C fazia programas de contabilidade doméstica,
-           leitura de arquivos
-           e todos os outros scripts básico que todos fazemos.</p>
-           <p>  Com o passar do tempo, m aprofundei nos estudos e hoje, trabalho como desenvolvedor
-           backend em uma empresa do setor financeiro e também curso engenharia da computação.</p>
-           <p>
-              O objetivo desse site é servir de hub para todas aplicações que desenvolvo no meu
-              tempo
-              livre e, de quebra, servir como uma espécie de currículo virtual, já que aqui ficará
-              gravado
-              todo meu progresso nos estudos do desenvolvimento web.
-           </p>
+            <p>
+              Uma lista das coisas que eu ja fiz.
+            </p>
+            <ul>
+              <li>Este site</li>
+              <li>Open Letter</li>
+              <li>Yanmaq</li>
+            </ul>
           </div>
         </section>
       </div>
@@ -35,7 +29,7 @@
 import MainBox from '../components/GlobalComponents/MainBox.vue';
 
 export default {
-  name: 'Home',
+  name: 'Portfolio',
   components: {
     MainBox,
   },
@@ -115,11 +109,11 @@ p {
   justify-self: center;
   text-align: justify;
   text-justify: inter-word;
+  color: #ECDBBA;
 }
 
 .content section .text p{
   text-indent: 1.5em;
-  color: #ECDBBA;
 
 }
 </style>

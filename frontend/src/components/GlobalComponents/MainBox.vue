@@ -1,11 +1,9 @@
 <template>
-<div class="depth">
-  <div class="globalBox">
     <aside>
       <img src="../../assets/photo.jpg" alt="Minha foto" class="photo">
       <h2>Augusto Sigolo</h2>
       <h4>Desenvolvedor web</h4>
-      <a class="asideButton" href="#">
+      <a class="asideButton" href="/">
        <div class="buttonContent">
           <img src="../../assets/codeIcon.png"/>
           <span>
@@ -13,7 +11,7 @@
           </span>
        </div>
       </a>
-      <a class="asideButton" href="#">
+      <a class="asideButton" href="/solucoes">
        <div class="buttonContent">
           <img src="../../assets/solutionIcon.png"/>
           <span>
@@ -21,7 +19,7 @@
           </span>
        </div>
       </a>
-      <a class="asideButton" href="#">
+      <a class="asideButton" href="/portfolio">
        <div class="buttonContent">
           <img src="../../assets/portfolio.png"/>
           <span>
@@ -29,7 +27,7 @@
           </span>
        </div>
       </a>
-      <a class="asideButton" href="#">
+      <a class="asideButton" href="/contato">
        <div class="buttonContent">
           <img src="../../assets/correio-de-contato.png"/>
           <span>
@@ -42,13 +40,7 @@
         <a href="https://twitter.com/comradsig" target="_blank"><img src="../../assets/twitter.png" alt="twitter icon"></a>
         <a href="https://www.linkedin.com/in/augusto-sigolo-66331b1b1/" target="_blank"><img src="../../assets/linkedin.png" alt="linkedin icon"></a>
       </div>
-
     </aside>
-    <main>
-      <h1>Olá mundo no main</h1>
-    </main>
-  </div>
-</div>
 </template>
 
 <script>
@@ -58,39 +50,19 @@ export default {
 
 <style>
 
-.depth{
-  background: #925F98;
-  position: static;
-}
-
-.globalBox{
-  background: #420149;
-  display: grid;
-  position: relative;
-  grid-template-columns: 4fr 16fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  box-shadow: 0px 12px 50px 4px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 12px 50px 4px rgba(0, 0, 0, 0.5);
-  bottom: 10px;
-  left: 10px;
-  height: calc(100vh - 30px);
-}
-
 aside{
   background: #420149;
-  grid-area: 1 / 1 / 2 / 2;
   border-right: 1px double #925F98;
   display: flex;
   flex-direction: column;
   justify-content: top;
   align-content: center;
+  position: static;
 }
 
 aside .photo{
-  width: 9vw;
-  height: 9vw;
+  width: 8em;
+  height: 8em;
   border-radius: 100px;
   align-self: center;
   margin-top: 20px;
@@ -144,20 +116,19 @@ aside .asideButton .buttonContent img {
 }
 
 aside .asideFooter{
-  position: absolute;
-  bottom: 0;
-  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  width: 19.5vw;
+  position: absolute;
+  bottom: 0;
+  left: 7vw;
 }
 
 aside .asideFooter a img{
   width: 1.5em;
   height: 1.5em;
-  margin-left: 5px;
+  margin-left: 20px;
 }
 
 main{

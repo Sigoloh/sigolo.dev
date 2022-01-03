@@ -5,26 +5,13 @@
       <main-box class="sideBar"/>
       <div class="content">
         <section>
-          <h1>sigolo.dev</h1>
-          <h2>Um hub? Um currículo?</h2>
+          <h1>Contato</h1>
+          <h2>Como você pode falar comigo?</h2>
           <hr/>
-          <div class="text">
-           <p>  Eu sou um programador desde que me lembro. Meu primeiro contato com programação
-            foi logo aos 10 anos,
-           quando vendo tutoriais de programação em C fazia programas de contabilidade doméstica,
-           leitura de arquivos
-           e todos os outros scripts básico que todos fazemos.</p>
-           <p>  Com o passar do tempo, m aprofundei nos estudos e hoje, trabalho como desenvolvedor
-           backend em uma empresa do setor financeiro e também curso engenharia da computação.</p>
-           <p>
-              O objetivo desse site é servir de hub para todas aplicações que desenvolvo no meu
-              tempo
-              livre e, de quebra, servir como uma espécie de currículo virtual, já que aqui ficará
-              gravado
-              todo meu progresso nos estudos do desenvolvimento web.
-           </p>
-          </div>
-        </section>
+          <p>As minhas redes sociais estão no rodapé da barra lateral.
+          Caso queira um contato mais direto, use o formulário abaixo.</p>
+          <contact-form/>
+       </section>
       </div>
     </main>
   </div>
@@ -32,12 +19,14 @@
 </template>
 
 <script>
+import ContactForm from '../components/Contact/ContactForm.vue';
 import MainBox from '../components/GlobalComponents/MainBox.vue';
 
 export default {
   name: 'Home',
   components: {
     MainBox,
+    ContactForm,
   },
 };
 </script>
@@ -109,17 +98,13 @@ p {
   margin-top: -10px;
 }
 
-.content section .text{
-  width: 80%;
-  align-self: center;
-  justify-self: center;
+.content section p{
   text-align: justify;
   text-justify: inter-word;
-}
-
-.content section .text p{
   text-indent: 1.5em;
-  color: #ECDBBA;
-
+  margin-right: 50px;
+  margin-left: 50px;
+  color:#ECDBBA;
 }
+
 </style>

@@ -5,24 +5,27 @@
       <main-box class="sideBar"/>
       <div class="content">
         <section>
-          <h1>sigolo.dev</h1>
-          <h2>Um hub? Um currículo?</h2>
+          <h1>Soluções</h1>
+          <h2>Como eu posso ajudar você?</h2>
           <hr/>
           <div class="text">
-           <p>  Eu sou um programador desde que me lembro. Meu primeiro contato com programação
-            foi logo aos 10 anos,
-           quando vendo tutoriais de programação em C fazia programas de contabilidade doméstica,
-           leitura de arquivos
-           e todos os outros scripts básico que todos fazemos.</p>
-           <p>  Com o passar do tempo, m aprofundei nos estudos e hoje, trabalho como desenvolvedor
-           backend em uma empresa do setor financeiro e também curso engenharia da computação.</p>
-           <p>
-              O objetivo desse site é servir de hub para todas aplicações que desenvolvo no meu
-              tempo
-              livre e, de quebra, servir como uma espécie de currículo virtual, já que aqui ficará
-              gravado
-              todo meu progresso nos estudos do desenvolvimento web.
-           </p>
+            <p>
+              Trabalho com desenvolvimentos de sites em wordpress,
+              desenvolvimento de sistemas full stack e também com inteligência de dados.
+            </p>
+            <p>
+              As formas como um site pode ajudar no crescimento da
+              sua empresa ou dos seus negócios são inúmeras. Uma
+              presença na internet, hoje, mais importante que uma
+              sala comercial ou um telefone de contato. Promovo
+              soluções personalizadas que se alinham às suas necessidades,
+              seja para um ecommerce, landing pages de produtos ou qualquer
+              outra demanda para a internet.
+            </p>
+            <p>
+            Caso tenha chegado até aqui, sugiro que veja a sessão
+            Portfólio, onde listo alguns dos meus projetos
+            </p>
           </div>
         </section>
       </div>
@@ -35,7 +38,7 @@
 import MainBox from '../components/GlobalComponents/MainBox.vue';
 
 export default {
-  name: 'Home',
+  name: 'Solucoes',
   components: {
     MainBox,
   },
