@@ -16,7 +16,7 @@
             <p>
               As formas como um site pode ajudar no crescimento da
               sua empresa ou dos seus negócios são inúmeras. Uma
-              presença na internet, hoje, mais importante que uma
+              presença na internet, hoje, é mais importante que uma
               sala comercial ou um telefone de contato. Promovo
               soluções personalizadas que se alinham às suas necessidades,
               seja para um ecommerce, landing pages de produtos ou qualquer

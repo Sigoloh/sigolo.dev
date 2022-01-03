@@ -9,14 +9,7 @@
           <h2>As coisas que eu faço</h2>
           <hr/>
           <div class="text">
-            <p>
-              Uma lista das coisas que eu ja fiz.
-            </p>
-            <ul>
-              <li>Este site</li>
-              <li>Open Letter</li>
-              <li>Yanmaq</li>
-            </ul>
+          <p>A ser implementado</p>
           </div>
         </section>
       </div>

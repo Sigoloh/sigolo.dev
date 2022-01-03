@@ -14,8 +14,8 @@
            quando vendo tutoriais de programação em C fazia programas de contabilidade doméstica,
            leitura de arquivos
            e todos os outros scripts básico que todos fazemos.</p>
-           <p>  Com o passar do tempo, m aprofundei nos estudos e hoje, trabalho como desenvolvedor
-           backend em uma empresa do setor financeiro e também curso engenharia da computação.</p>
+           <p>  Com o passar do tempo, me aprofundei nos estudos e hoje, trabalho como desenvolvedor
+          backend em uma empresa do setor financeiro e também curso engenharia da computação.</p>
            <p>
               O objetivo desse site é servir de hub para todas aplicações que desenvolvo no meu
               tempo
