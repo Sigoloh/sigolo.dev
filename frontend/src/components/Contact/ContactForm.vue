@@ -29,7 +29,7 @@ v-model="state.userEmail"
 </textarea>
 </div>
 <div class="backgroundButton">
-<input type="submit" value="Enviar" @click="sendEmail()" class="submitButton">
+<input type="submit" value="Enviar" @click="onCaptchaLoaded()" class="submitButton">
 </div>
 </div>
 </div>
@@ -37,7 +37,7 @@ v-model="state.userEmail"
 
 <script>
 import axios from 'axios';
-import { reactive } from 'vue';
+import { onMounted, reactive } from 'vue';
 
 const instance = axios.create({
   baseURL: 'https://api.emailjs.com/api/v1.0/email',
@@ -55,9 +55,9 @@ export default {
     async function sendEmail() {
       try {
         await instance.post('/send', {
-          service_id: 'service_qf6866x',
-          template_id: 'template_fh39yda',
-          user_id: 'user_m63ffj0CXBtPVXoynOtiz',
+          service_id: process.env.VUE_APP_EMAIL_SERVICE_ID,
+          template_id: process.env.VUE_APP_EMAIL_TEMPLATE_ID,
+          user_id: process.env.VUE_APP_EMAIL_USER_ID,
           template_params: {
             userName: state.userName,
             userEmail: state.userEmail,
@@ -69,7 +69,14 @@ export default {
         state.success = 'erro';
       }
     }
-    return { state, sendEmail };
+
+    onMounted(() => {
+      console.log(process.env);
+    });
+    return {
+      state,
+      sendEmail,
+    };
   },
 };
 </script>
