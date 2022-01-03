@@ -70,9 +70,6 @@ export default {
       }
     }
 
-    onMounted(() => {
-      console.log(process.env);
-    });
     return {
       state,
       sendEmail,
