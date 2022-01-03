@@ -29,7 +29,7 @@ v-model="state.userEmail"
 </textarea>
 </div>
 <div class="backgroundButton">
-<input type="submit" value="Enviar" @click="onCaptchaLoaded()" class="submitButton">
+<input type="submit" value="Enviar" @click="sendEmail()" class="submitButton">
 </div>
 </div>
 </div>
