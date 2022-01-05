@@ -67,7 +67,11 @@ export default {
 </script>
 
 <style>
-
+.desktopVersion{
+  max-width: calc(100vw - 30px);
+  margin-top: 20px;
+  margin-left: 10px;
+}
 .desktopVersion .depth{
 background: #925F98;
 position: static;
