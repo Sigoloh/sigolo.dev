@@ -79,16 +79,10 @@ export default {
 </script>
 
 <style>
-.contactForm{
-display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-content: center;
-}
 
 .form{
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 1em;
+  margin-right: calc(1em + 10px);
 display: flex;
          flex-direction: column;
          justify-content: center;

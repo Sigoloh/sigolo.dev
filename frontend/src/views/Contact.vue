@@ -26,10 +26,10 @@
           <h2>Como você pode falar comigo?</h2>
           <hr>
           <div class="text">
-            <p>As minhas redes sociais estão no rodapé da barra lateral.
+            <p>As minhas redes sociais estão no rodapé da página.
             Caso queira um contato mais direto, use o formulário abaixo.</p>
-            <contact-form/>
           </div>
+          <contact-form class="mobileForm"/>
         </section>
       </main>
       <mobile-footer/>
