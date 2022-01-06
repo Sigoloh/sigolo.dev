@@ -7,7 +7,7 @@
        <div class="buttonContent">
           <img src="../../assets/codeIcon.png"/>
           <span>
-            sigolo.dev
+            sigolo.me
           </span>
        </div>
       </a>

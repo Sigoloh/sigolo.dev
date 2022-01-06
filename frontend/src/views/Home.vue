@@ -7,7 +7,7 @@
           <main-box class="sideBar"/>
             <div class="content">
               <section>
-                <h1>sigolo.dev</h1>
+                <h1>sigolo.me</h1>
                 <h2>Um hub? Um currículo?</h2>
                 <hr/>
                 <div class="text">
