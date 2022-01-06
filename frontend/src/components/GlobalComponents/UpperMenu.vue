@@ -113,11 +113,13 @@ export default {
   justify-content: center;
   align-content: center;
   vertical-align: middle;
+  height: 100%;
 }
 
 .mobileMenu nav .textInfo h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  font-size: 5vw;
   color: #00DE28;
   margin-bottom: -0.01em;
   line-height: 0px;
@@ -127,7 +129,7 @@ export default {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   color: #2B9B3F;
-  line-height: 0px;
+  font-size: 5vw;
 }
 
 .mobileMenu nav .menuIconBox{
@@ -168,21 +170,34 @@ export default {
 }
 
 .mobileMenu menu a{
-  background: #2B9B3F;
-  margin: 5px;
-  margin-bottom: 10px;
-  height: 3em;
+  background: #00FF2E;
   display: flex;
-  flex-direction: column;
-  align-content: center;
+  flex-direction: row;
   justify-content: center;
-  position:static;
-  border: 3px solid #00FF2E;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5em;
-  font-weight: 600;
-  color: #420149;
+  align-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  position: static;
   text-decoration: none;
+  color: #420149;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.mobileMenu menu a .mobileMenuButton{
+  background: #2B9B3F;
+  position: relative;
+  width: 100%;
+  left: 5px;
+  bottom: 5px;
+  font-size: 2em;
+}
+
+.mobileMenu menu a:focus .mobileMenuButton{
+  left: 0;
+  bottom: 0;
 }
 
 .mobileMenu menu a:active{

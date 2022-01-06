@@ -1,46 +1,56 @@
 <template>
   <div class="Home">
-  <div class="depth">
-    <main>
-      <main-box class="sideBar"/>
-      <div class="content">
-        <section>
-          <h1>Soluções</h1>
-          <h2>Como eu posso ajudar você?</h2>
-          <hr/>
-          <div class="text">
-            <p>
-              Trabalho com desenvolvimentos de sites em wordpress,
-              desenvolvimento de sistemas full stack e também com inteligência de dados.
-            </p>
-            <p>
-              As formas como um site pode ajudar no crescimento da
-              sua empresa ou dos seus negócios são inúmeras. Uma
-              presença na internet, hoje, é mais importante que uma
-              sala comercial ou um telefone de contato. Promovo
-              soluções personalizadas que se alinham às suas necessidades,
-              seja para um ecommerce, landing pages de produtos ou qualquer
-              outra demanda para a internet.
-            </p>
-            <p>
-            Caso tenha chegado até aqui, sugiro que veja a sessão
-            Portfólio, onde listo alguns dos meus projetos
-            </p>
-          </div>
-        </section>
-      </div>
-    </main>
-  </div>
+  <!--Versão desktop-->
+  <mq-responsive target="lg+" class="desktopVersion">
+    <div class="depth">
+      <main>
+        <main-box class="sideBar"/>
+        <div class="content">
+          <section>
+            <h1>Soluções</h1>
+            <h2>Como eu posso ajudar você?</h2>
+            <hr/>
+            <div class="text">
+              <p>
+                Trabalho com desenvolvimentos de sites em wordpress,
+                desenvolvimento de sistemas full stack e também com inteligência de dados.
+              </p>
+              <p>
+                As formas como um site pode ajudar no crescimento da
+                sua empresa ou dos seus negócios são inúmeras. Uma
+                presença na internet, hoje, é mais importante que uma
+                sala comercial ou um telefone de contato. Promovo
+                soluções personalizadas que se alinham às suas necessidades,
+                seja para um ecommerce, landing pages de produtos ou qualquer
+                outra demanda para a internet.
+              </p>
+              <p>
+              Caso tenha chegado até aqui, sugiro que veja a sessão
+              Portfólio, onde listo alguns dos meus projetos
+              </p>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </mq-responsive>
+  <mq-responsive target="sm-">
+    <upper-menu/>
+  </mq-responsive>
   </div>
 </template>
 
 <script>
+import { MqResponsive } from 'vue3-mq';
 import MainBox from '../components/GlobalComponents/MainBox.vue';
+import UpperMenu from '../components/GlobalComponents/UpperMenu.vue';
 
 export default {
   name: 'Solucoes',
   components: {
     MainBox,
+    MqResponsive,
+    UpperMenu,
   },
 };
 </script>

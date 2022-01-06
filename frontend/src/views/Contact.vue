@@ -1,31 +1,40 @@
 <template>
   <div class="Home">
-  <div class="depth">
-    <main>
-      <main-box class="sideBar"/>
-      <div class="content">
-        <section>
-          <h1>Contato</h1>
-          <h2>Como você pode falar comigo?</h2>
-          <hr/>
-          <p>As minhas redes sociais estão no rodapé da barra lateral.
-          Caso queira um contato mais direto, use o formulário abaixo.</p>
-          <contact-form/>
-       </section>
-      </div>
-    </main>
-  </div>
+  <mq-responsive target="lg+" class="desktopVersion">
+    <div class="depth">
+      <main>
+        <main-box class="sideBar"/>
+        <div class="content">
+          <section>
+            <h1>Contato</h1>
+            <h2>Como você pode falar comigo?</h2>
+            <hr/>
+            <p>As minhas redes sociais estão no rodapé da barra lateral.
+            Caso queira um contato mais direto, use o formulário abaixo.</p>
+            <contact-form/>
+         </section>
+        </div>
+      </main>
+    </div>
+  </mq-responsive>
+  <mq-responsive target="sm-">
+    <upper-menu/>
+  </mq-responsive>
   </div>
 </template>
 
 <script>
+import { MqResponsive } from 'vue3-mq';
 import ContactForm from '../components/Contact/ContactForm.vue';
 import MainBox from '../components/GlobalComponents/MainBox.vue';
+import UpperMenu from '../components/GlobalComponents/UpperMenu.vue';
 
 export default {
   name: 'Home',
   components: {
     MainBox,
+    MqResponsive,
+    UpperMenu,
     ContactForm,
   },
 };

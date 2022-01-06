@@ -39,7 +39,7 @@
         </main>
       </div>
     </mq-responsive>
-    <mq-responsive target="sm-" class="mobileVersion">
+    <mq-responsive target="md-" class="mobileVersion">
       <upper-menu/>
     </mq-responsive>
     </div>
@@ -116,11 +116,11 @@ height: calc(100vh - 8% - 20px);
 
 .desktopVersion .content h1{
   font-family: 'Montserrat', sans-serif;
-  font-size: 5px;
+  font-size: 5em;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 400;
-  color:white;
+  color:#00FF2E;
 }
 
 .desktopVersion .content section h2{

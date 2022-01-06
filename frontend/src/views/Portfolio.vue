@@ -1,30 +1,39 @@
 <template>
   <div class="Home">
-  <div class="depth">
-    <main>
-      <main-box class="sideBar"/>
-      <div class="content">
-        <section>
-          <h1>Portfólio</h1>
-          <h2>As coisas que eu faço</h2>
-          <hr/>
-          <div class="text">
-          <p>A ser implementado</p>
-          </div>
-        </section>
-      </div>
-    </main>
-  </div>
+  <mq-responsive target="lg+" class="desktopVersion">
+    <div class="depth">
+      <main>
+        <main-box class="sideBar"/>
+        <div class="content">
+          <section>
+            <h1>Portfólio</h1>
+            <h2>As coisas que eu faço</h2>
+            <hr/>
+            <div class="text">
+            <p>A ser implementado</p>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </mq-responsive>
+  <mq-responsive target="sm-">
+    <upper-menu/>
+  </mq-responsive>
   </div>
 </template>
 
 <script>
+import { MqResponsive } from 'vue3-mq';
 import MainBox from '../components/GlobalComponents/MainBox.vue';
+import UpperMenu from '../components/GlobalComponents/UpperMenu.vue';
 
 export default {
   name: 'Portfolio',
   components: {
     MainBox,
+    MqResponsive,
+    UpperMenu,
   },
 };
 </script>
