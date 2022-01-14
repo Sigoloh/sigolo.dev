@@ -10,7 +10,23 @@
             <h2>As coisas que eu faço</h2>
             <hr/>
             <div class="text">
-            <p>A ser implementado</p>
+              <table>
+                <tr>
+                  <th>Nome</th>
+                  <th>Descrição</th>
+                  <th>Link</th>
+                  <th>Atualizado</th>
+                  <th>Criado</th>
+                </tr>
+                <tr v-for="repo in state.repos" :key="repo.id">
+                  <td>{{repo[0].name}}</td>
+                  <td>{{repo[0].description}}</td>
+                  <td><a :href="repo[0].html_url" target="_blank">Link</a></td>
+                  <td>{{state.date(repo[0].updated_at)}}</td>
+                  <td>{{state.date(repo[0].created_at)}}</td>
+                  <td></td>
+                </tr>
+              </table>
             </div>
           </section>
         </div>
@@ -39,11 +55,48 @@
 
 <script>
 import { MqResponsive } from 'vue3-mq';
+import axios from 'axios';
+import { onMounted, reactive } from 'vue';
 import MainBox from '../components/GlobalComponents/MainBox.vue';
 import UpperMenu from '../components/GlobalComponents/UpperMenu.vue';
 import MobileFooter from '../components/GlobalComponents/MobileFooter.vue';
 
+const instance = axios.create({
+  baseURL: 'https://api.emailjs.com/api/v1.0/email',
+});
+
 export default {
+  setup() {
+    const state = reactive({
+      repos: [],
+      date: (dateToConvert) => {
+        const formatedDate = dateToConvert.substring(0, 10);
+        return `${formatedDate.substring(8, 10)} / ${formatedDate.substring(5, 7)} / ${formatedDate.substring(0, 4)}`;
+      },
+    });
+
+    onMounted(async () => {
+      const reposToBeShown = await instance.get('https://files.sigolo.me/public-files/sigolo.dev%20Conf/repos.json');
+      const allRepos = await instance.get('https://api.github.com/users/Sigoloh/repos', {
+        headers: {
+          Accept: 'application/vnd.github.full+json',
+        },
+      });
+
+      for (let i = 0; i < reposToBeShown.data.ReposToBeShown.length; i += 1) {
+        const callback = (repo) => repo.name === reposToBeShown.data.ReposToBeShown[i]
+          .name.toString();
+        state.repos.push(allRepos.data.filter(callback));
+      }
+
+      console.log(state.repos);
+    });
+
+    return {
+      state,
+      onMounted,
+    };
+  },
   name: 'Portfolio',
   components: {
     MainBox,
