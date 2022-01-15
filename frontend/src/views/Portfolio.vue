@@ -44,7 +44,24 @@
           <h2>O que ja fiz?</h2>
           <hr/>
           <div class="text">
-            <p>A ser implementado</p>
+            <table>
+                <tr>
+                  <th>Nome</th>
+                  <th>Descrição</th>
+                  <th>Link</th>
+                  <th>Atualizado</th>
+                  <th>Criado</th>
+                </tr>
+                <tr v-for="repo in state.repos" :key="repo.id">
+                  <td>{{repo[0].name}}</td>
+                  <td>{{repo[0].description}}</td>
+                  <td><a :href="repo[0].html_url" target="_blank">
+                    <img src="../assets/github.png" alt="">
+                  </a></td>
+                  <td>{{state.date(repo[0].updated_at)}}</td>
+                  <td>{{state.date(repo[0].created_at)}}</td>
+                </tr>
+              </table>
           </div>
         </section>
       </main>
@@ -175,7 +192,7 @@ p {
   margin-top: -10px;
 }
 
-.desktopVersion .content section .text{
+section .text{
   align-self: center;
   justify-self: center;
   text-align: justify;
@@ -185,7 +202,7 @@ p {
   overflow-y: auto;
 }
 
-.desktopVersion .content section .text table{
+section .text table{
   max-width: 100%;
   border-collapse: collapse;
   border-radius: 10px;
@@ -197,46 +214,46 @@ p {
   scrollbar-color: #9900A9 #191919;
 }
 
-.desktopVersion .content section .text table::-webkit-scrollbar{
+section .text table::-webkit-scrollbar{
   width: 12px;
 }
 
-.desktopVersion .content section .text table::-webkit-scrollbar-track{
+section .text table::-webkit-scrollbar-track{
   background: #191919;
 }
 
-.desktopVersion .content section .text table::-webkit-scrollbar-thumb{
+section .text table::-webkit-scrollbar-thumb{
   background-color: #9900A9;
   border-radius: 20px;
   border: 3px solid #191919;
 }
 
-.desktopVersion .content section .text table tr{
+section .text table tr{
   height: 10vh;
   width: 10vw;
 }
-.desktopVersion .content section .text table tr:nth-child(odd){
+section .text table tr:nth-child(odd){
   background: #4c4c4c;
 }
 
-.desktopVersion .content section .text table tr>td{
+section .text table tr>td{
   padding: 10px;
 }
 
-.desktopVersion .content section .text table tr img{
-  width: 40px;
-  height: 40px;
+section .text table tr img{
+  width: 2em;
+  height: 2em;
 }
 
-.desktopVersion .content section .text table td:nth-child(2){
+section .text table td:nth-child(2){
   padding-bottom: 5px;
 }
 
-.desktopVersion .content section .text table td:nth-child(4), td:nth-child(5){
+section .text table td:nth-child(4), td:nth-child(5){
   letter-spacing: 3px;
 }
 
-.desktopVersion .content section .text p{
+section .text p{
   text-indent: 1.5em;
 
 }
