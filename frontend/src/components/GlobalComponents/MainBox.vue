@@ -3,14 +3,14 @@
       <img src="../../assets/photo.jpg" alt="Minha foto" class="photo">
       <h2>Augusto Sigolo</h2>
       <h4>Desenvolvedor web</h4>
-      <a class="asideButton" href="/">
+      <router-link class="asideButton" to="/">
        <div class="buttonContent">
           <img src="../../assets/codeIcon.png"/>
           <span>
             sigolo.me
           </span>
        </div>
-      </a>
+      </router-link>
       <router-link class="asideButton" to="/solucoes">
        <div class="buttonContent">
           <img src="../../assets/solutionIcon.png"/>
