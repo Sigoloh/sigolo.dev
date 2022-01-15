@@ -95,22 +95,28 @@ export default {
         return `${formatedDate.substring(8, 10)}/${formatedDate.substring(5, 7)}/${formatedDate.substring(0, 4)}`;
       },
     });
-
     onMounted(async () => {
-      const reposToBeShown = await instance.get('https://files.sigolo.me/public-files/sigolo.dev%20Conf/repos.json');
-      const allRepos = await instance.get('https://api.github.com/users/Sigoloh/repos', {
-        headers: {
-          Accept: 'application/vnd.github.full+json',
-        },
-      });
-
-      for (let i = 0; i < reposToBeShown.data.ReposToBeShown.length; i += 1) {
-        const callback = (repo) => repo.name === reposToBeShown.data.ReposToBeShown[i]
-          .name.toString();
-        state.repos.push(allRepos.data.filter(callback));
+      const now = new Date();
+      if (parseInt(localStorage.getItem('lasTimeGitRetrieved'), 10) - now.getTime() <= 21600000) {
+        state.repos = JSON.parse(
+          localStorage.getItem('repos'),
+        );
+      } else {
+        const reposToBeShown = await instance.get('https://files.sigolo.me/public-files/sigolo.dev%20Conf/repos.json');
+        const allRepos = await instance.get('https://api.github.com/users/Sigoloh/repos', {
+          headers: {
+            Accept: 'application/vnd.github.full+json',
+          },
+        });
+        for (let i = 0; i < reposToBeShown.data.ReposToBeShown.length; i += 1) {
+          const callback = (repo) => repo.name === reposToBeShown.data.ReposToBeShown[i]
+            .name.toString();
+          state.repos.push(allRepos.data.filter(callback));
+        }
+        const date = new Date();
+        localStorage.setItem('repos', JSON.stringify(state.repos));
+        localStorage.setItem('lasTimeGitRetrieved', date.getTime());
       }
-
-      console.log(state.repos);
     });
 
     return {
@@ -233,6 +239,7 @@ section .text{
 
 section .text table{
   max-width: 100%;
+  max-height: 70vh;
   border-collapse: collapse;
   border-radius: 10px;
   padding: 5px;
