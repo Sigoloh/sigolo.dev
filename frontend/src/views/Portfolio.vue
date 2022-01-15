@@ -9,7 +9,7 @@
             <h1>Portfólio</h1>
             <h2>As coisas que eu faço</h2>
             <hr/>
-            <div class="text">
+            <div class="text" v-if="state.repos.length != 0">
               <table>
                 <tr>
                   <th>Nome</th>
@@ -29,6 +29,8 @@
                 </tr>
               </table>
             </div>
+            <div class="retrievingData" v-else>
+            </div>
           </section>
         </div>
       </main>
@@ -44,7 +46,7 @@
           <h2>O que ja fiz?</h2>
           <hr/>
           <div class="text">
-            <table>
+            <table v-if="state.repos.length !== 0">
                 <tr>
                   <th>Nome</th>
                   <th>Descrição</th>
@@ -62,6 +64,7 @@
                   <td>{{state.date(repo[0].created_at)}}</td>
                 </tr>
               </table>
+              <p v-else> Adquirindo dados</p>
           </div>
         </section>
       </main>
@@ -190,6 +193,32 @@ p {
   background: #9900A9;
   border: none;
   margin-top: -10px;
+}
+
+section .retrievingData{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-self: center;
+  font-weight: 900;
+  font-size: 1em;
+  border: 2px dotted white;
+  border-radius: 3em;
+  width: 3em;
+  text-align: left;
+  animation: rotate 2s;
+  height: 3em;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate{
+  from{
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 section .text{
