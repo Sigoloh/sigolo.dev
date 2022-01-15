@@ -11,30 +11,30 @@
           </span>
        </div>
       </a>
-      <a class="asideButton" href="/solucoes">
+      <router-link class="asideButton" to="/solucoes">
        <div class="buttonContent">
           <img src="../../assets/solutionIcon.png"/>
           <span>
             Soluções
           </span>
        </div>
-      </a>
-      <a class="asideButton" href="/portfolio">
+      </router-link>
+      <router-link class="asideButton" to="/portfolio">
        <div class="buttonContent">
           <img src="../../assets/portfolio.png"/>
           <span>
             Portfólio
           </span>
        </div>
-      </a>
-      <a class="asideButton" href="/contato">
+      </router-link>
+      <router-link class="asideButton" to="/contato">
        <div class="buttonContent">
           <img src="../../assets/correio-de-contato.png"/>
           <span>
             Contato
           </span>
        </div>
-      </a>
+      </router-link>
       <div class="asideFooter">
         <a href="https://github.com/Sigoloh/" target="_blank"><img src="../../assets/github.png" alt="github icon"></a>
         <a href="https://twitter.com/comradsig" target="_blank"><img src="../../assets/twitter.png" alt="twitter icon"></a>
