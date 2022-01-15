@@ -97,12 +97,18 @@ export default {
     });
     onMounted(async () => {
       const now = new Date();
-      if (parseInt(localStorage.getItem('lasTimeGitRetrieved'), 10) - now.getTime() <= 21600000) {
+      if (now.getTime() - parseInt(localStorage.getItem('lasTimeGitRetrieved'), 10) <= 21600000) {
+        console.log('Não ta na hora de mudar ainda não');
         state.repos = JSON.parse(
           localStorage.getItem('repos'),
         );
       } else {
-        const reposToBeShown = await instance.get('https://files.sigolo.me/public-files/sigolo.dev%20Conf/repos.json');
+        console.log('Ta na hora de mudar ja');
+        localStorage.removeItem('repos');
+        const reposToBeShown = await instance.get('https://files.sigolo.me/public-files/sigolo.dev%20Conf/repos.json',
+          {
+            'Access-Control-Allow-Origin': '*',
+          });
         const allRepos = await instance.get('https://api.github.com/users/Sigoloh/repos', {
           headers: {
             Accept: 'application/vnd.github.full+json',
