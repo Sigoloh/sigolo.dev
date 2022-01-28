@@ -3,6 +3,8 @@ import Home from '../views/Home.vue';
 import Solucoes from '../views/Soluctions.vue';
 import Portfolio from '../views/Portfolio.vue';
 import Contato from '../views/Contact.vue';
+import Short from '../views/Short.vue';
+import NotFound from '../views/NotFound.vue';
 
 const routes = [
   {
@@ -24,6 +26,16 @@ const routes = [
     path: '/contato',
     name: 'Contato',
     component: Contato,
+  },
+  {
+    path: '/404',
+    name: '404',
+    component: NotFound,
+  },
+  {
+    path: '/:alias',
+    name: 'Short',
+    component: Short,
   },
 ];
 
