@@ -1,5 +1,10 @@
 <template>
-  <h1>Olá, encurtador</h1>
+  <div class="redirectMessage">
+    <h1>Você esta sendo redirecionado</h1>
+    <p>Caso o redirecionamento não funcione,
+      <router-link to="/contato">fale comigo</router-link>
+    </p>
+  </div>
 </template>
 <script>
 import { useRoute } from 'vue-router';
@@ -7,7 +12,7 @@ import axios from 'axios';
 import { onMounted } from 'vue';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: process.env.VUE_APP_BACKEND_LINK || 'localhost:3000',
 });
 
 export default {
