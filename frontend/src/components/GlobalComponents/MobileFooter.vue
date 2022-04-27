@@ -20,7 +20,8 @@ export default {
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  border-top: 1px solid #925F98;
+  background: #1e1e1e;
+  border-top: 1px solid #1e1e1e;
 }
 
 .mobileFooter footer a img{

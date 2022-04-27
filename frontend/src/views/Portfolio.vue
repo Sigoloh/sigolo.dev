@@ -43,12 +43,14 @@
     <div class="mobileBody">
       <upper-menu class="mobileMenu"/>
       <main>
-        <section class="mobileContent">
-          <h1>Portfólio</h1>
-          <h2>O que ja fiz?</h2>
-          <hr/>
-          <div class="text">
-            <table v-if="state.repos.length !== 0">
+          <article>
+            <h1>Portfólio</h1>
+            <h2>As coisas que eu faço</h2>
+            <hr/>
+            <div class="cards">
+           </div>
+            <div class="text" v-if="state.repos.length != 0">
+              <table class="projectsTable">
                 <tr>
                   <th>Nome</th>
                   <th>Descrição</th>
@@ -60,15 +62,16 @@
                   <td>{{repo[0].name}}</td>
                   <td>{{repo[0].description}}</td>
                   <td><a :href="repo[0].html_url" target="_blank">
-                    <img src="../assets/github.png" alt="">
+                    <img src="../assets/github.png" alt="" class="projectImg">
                   </a></td>
                   <td>{{state.date(repo[0].updated_at)}}</td>
                   <td>{{state.date(repo[0].created_at)}}</td>
                 </tr>
               </table>
-              <p v-else> Adquirindo dados</p>
-          </div>
-        </section>
+            </div>
+            <div class="retrievingData" v-else>
+            </div>
+          </article>
       </main>
       <mobile-footer></mobile-footer>
     </div>
@@ -147,7 +150,11 @@ export default {
 .projectImg{
   width: 24px;
   }
-
+.projectsTable{
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
 .projectsTable tr:nth-child(odd){
   background: #C6C6C6;
 }

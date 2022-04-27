@@ -5,20 +5,19 @@
           <img src="../../assets/photo.jpg" alt="Minha foto" class="photo">
           <div class="textInfo">
             <h2>Augusto Sigolo</h2>
-            <h4>Desenvolvedor web</h4>
           </div>
         </div>
         <div class="menuIconBox">
           <img
             v-if="!state.showMenu"
-            src="../../assets/menuIconUnpressed.svg"
+            src="../../assets/menuIconUnpressed.png"
             alt="menu icon"
             class="menuIcon"
             @click="toggleMenu()"
           />
           <img
             v-else
-            src="../../assets/menuIconPressed.svg"
+            src="../../assets/menuIconPressed.png"
             alt="menu icon"
             class="menuIcon"
             @click="toggleMenu()"
@@ -26,16 +25,15 @@
         </div>
       </nav>
       <menu v-if="state.showMenu">
-        <hr/>
         <div class="mobileMenuButtons">
           <a href="/">
             <div class="mobileMenuButton">
-              sigolo.me
+              Home
             </div>
           </a>
-          <a href="/solucoes">
+          <a href="/projeto_california">
             <div class="mobileMenuButton">
-              Soluções
+              Projeto Califórnia
             </div>
           </a>
           <a href="/portfolio">
@@ -90,7 +88,7 @@ export default {
   height: 100%;
   max-width: 100vw;
   padding: 0.7em;
-  background: #420149;
+  background: #1E1E1E;
 }
 
 .mobileMenu nav .photo{
@@ -120,16 +118,9 @@ export default {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 5vw;
-  color: #00DE28;
-  margin-bottom: -0.01em;
+  text-align: center;
+  color: #FFFFFF;
   line-height: 0px;
-}
-
-.mobileMenu nav .textInfo h4{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  color: #2B9B3F;
-  font-size: 5vw;
 }
 
 .mobileMenu nav .menuIconBox{
@@ -158,19 +149,11 @@ export default {
   margin-top: -10px;
   padding: 0;
   margin-bottom: -10px;
-  background: #420149;
-}
-
-.mobileMenu menu hr{
-  align-self: center;
-  width: 70vw;
-  border:none;
-  height: 3px;
-  background: #9900A9;
+  background: #1E1E1E;
+  border-bottom: 10px #fff;
 }
 
 .mobileMenu menu a{
-  background: #00FF2E;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -180,14 +163,14 @@ export default {
   margin-bottom: 20px;
   position: static;
   text-decoration: none;
-  color: #420149;
+  color: #FFF;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: bold;
+  font-size: 0.5em;
 }
 
 .mobileMenu menu a .mobileMenuButton{
-  background: #2B9B3F;
   position: relative;
   width: 100%;
   left: 5px;
