@@ -1,4 +1,5 @@
 <template>
+<!-- eslint-disable max-len -->
   <div class="Home">
   <!--Versão desktop-->
   <mq-responsive target="lg+" class="desktopVersion">
@@ -114,6 +115,7 @@
     </div>
    </mq-responsive>
   </div>
+<!-- eslint-enable max-len -->
 </template>
 
 <script>
