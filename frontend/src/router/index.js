@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import Solucoes from '../views/Soluctions.vue';
 import Portfolio from '../views/Portfolio.vue';
-import Contato from '../views/Contact.vue';
 import Short from '../views/Short.vue';
 import NotFound from '../views/NotFound.vue';
 
@@ -13,8 +12,8 @@ const routes = [
     component: Home,
   },
   {
-    path: '/solucoes',
-    name: 'Solucoes',
+    path: '/projeto_california',
+    name: 'California',
     component: Solucoes,
   },
   {
@@ -25,7 +24,7 @@ const routes = [
   {
     path: '/contato',
     name: 'Contato',
-    component: Contato,
+    component: NotFound,
   },
   {
     path: '/404',

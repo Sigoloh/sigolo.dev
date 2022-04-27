@@ -5,12 +5,14 @@
       <main>
         <main-box class="sideBar"/>
         <div class="content">
-          <section>
+          <article>
             <h1>Portfólio</h1>
             <h2>As coisas que eu faço</h2>
             <hr/>
+            <div class="cards">
+           </div>
             <div class="text" v-if="state.repos.length != 0">
-              <table>
+              <table class="projectsTable">
                 <tr>
                   <th>Nome</th>
                   <th>Descrição</th>
@@ -22,7 +24,7 @@
                   <td>{{repo[0].name}}</td>
                   <td>{{repo[0].description}}</td>
                   <td><a :href="repo[0].html_url" target="_blank">
-                    <img src="../assets/github.png" alt="">
+                    <img src="../assets/github.png" alt="" class="projectImg">
                   </a></td>
                   <td>{{state.date(repo[0].updated_at)}}</td>
                   <td>{{state.date(repo[0].created_at)}}</td>
@@ -31,7 +33,7 @@
             </div>
             <div class="retrievingData" v-else>
             </div>
-          </section>
+          </article>
         </div>
       </main>
     </div>
@@ -105,7 +107,7 @@ export default {
       } else {
         console.log('Ta na hora de mudar ja');
         localStorage.removeItem('repos');
-        const reposToBeShown = await instance.get('https://files.sigolo.me/public-files/sigolo.dev%20Conf/repos.json',
+        const reposToBeShown = await instance.get('https://gist.githubusercontent.com/Sigoloh/c5e1cdcfa7b8a2f45dd1db49a71c165c/raw/40d918a64535aba685a770bb7b63a0ec2f5ff98f/repos.json',
           {
             'Access-Control-Allow-Origin': '*',
           });
@@ -114,6 +116,7 @@ export default {
             Accept: 'application/vnd.github.full+json',
           },
         });
+
         for (let i = 0; i < reposToBeShown.data.ReposToBeShown.length; i += 1) {
           const callback = (repo) => repo.name === reposToBeShown.data.ReposToBeShown[i]
             .name.toString();
@@ -141,162 +144,15 @@ export default {
 </script>
 
 <style>
-.desktopVersion .depth{
-  background: #925F98;
-  position: static;
-}
-.desktopVersion main {
-  display: grid;
-  grid-template-columns: 4fr 10fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  position: relative;
-  bottom: 10px;
-  left: 10px;
-  height: calc(100vh - 30px);
-}
-
-.desktopVersion .sideBar{
-  grid-area: 1 / 1 / 2 / 2;
-}
-
-.desktopVersion .content{
-  grid-area: 1 / 2 / 2 / 3;
-}
-
-p {
-  font-family: 'Roboto', sans-serif;
-}
-
-.desktopVersion .content section{
-  background: #191919;
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-right: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  height: calc(100vh - 8% - 20px);
-}
-
-.desktopVersion .content section h1{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 100px;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-weight: 400;
-  color: #00DE28;
-}
-
-.desktopVersion .content section h2{
-  color: #2B9B3F;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
-  font-weight: 300;
-  margin-top: -5px;
-}
-
-.desktopVersion .content section hr{
-  width: 65%;
-  height: 5px;
-  background: #9900A9;
-  border: none;
-  margin-top: -10px;
-}
-
-section .retrievingData{
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-self: center;
-  font-weight: 900;
-  font-size: 1em;
-  border: 2px dotted white;
-  border-radius: 3em;
-  width: 3em;
-  text-align: left;
-  animation: rotate 2s;
-  height: 3em;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes rotate{
-  from{
-    transform: rotate(0deg);
+.projectImg{
+  width: 24px;
   }
-  to {
-    transform: rotate(359deg);
-  }
+
+.projectsTable tr:nth-child(odd){
+  background: #C6C6C6;
 }
 
-section .text{
-  align-self: center;
-  justify-self: center;
-  text-align: justify;
-  text-justify: inter-word;
-  color: #ECDBBA;
-  overflow-x: auto;
-  overflow-y: auto;
-}
-
-section .text table{
-  max-width: 100%;
-  max-height: 70vh;
-  border-collapse: collapse;
-  border-radius: 10px;
-  padding: 5px;
-  text-align: center;
-  font-size: 0.8em;
-  font-family: 'Montserrat', sans-serif;
-  scrollbar-width: thin;
-  scrollbar-color: #9900A9 #191919;
-}
-
-section .text table::-webkit-scrollbar{
-  width: 12px;
-}
-
-section .text table::-webkit-scrollbar-track{
-  background: #191919;
-}
-
-section .text table::-webkit-scrollbar-thumb{
-  background-color: #9900A9;
-  border-radius: 20px;
-  border: 3px solid #191919;
-}
-
-section .text table tr{
-  height: 10vh;
-  width: 10vw;
-}
-section .text table tr:nth-child(odd){
-  background: #4c4c4c;
-}
-
-section .text table tr>td{
-  padding: 10px;
-}
-
-section .text table tr img{
-  width: 2em;
-  height: 2em;
-}
-
-section .text table td:nth-child(2){
-  padding-bottom: 5px;
-}
-
-section .text table td:nth-child(4), td:nth-child(5){
-  letter-spacing: 3px;
-}
-
-section .text p{
-  text-indent: 1.5em;
-
+.projectsTable{
+  font-size: 1.2em;
 }
 </style>
