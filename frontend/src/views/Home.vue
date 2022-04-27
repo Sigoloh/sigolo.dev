@@ -39,11 +39,8 @@
       <div class="mobileBody">
         <upper-menu class="mobileMenu"/>
           <main>
-            <section class="mobileContent">
-              <h1>sigolo.me</h1>
-              <h2>Um hub? Um currículo?</h2>
-              <hr/>
-              <div class="text">
+            <article>
+              <h1>Augusto Sigolo</h1>
                 <p>  Eu sou um programador desde que me lembro. Meu primeiro contato
                      com programação
                      foi logo aos 10 anos,
@@ -66,8 +63,7 @@
                      gravado
                      todo meu progresso nos estudos do desenvolvimento web.
                 </p>
-             </div>
-            </section>
+            </article>
           </main>
           <mobile-footer class="mobileFooter"></mobile-footer>
       </div>
@@ -143,7 +139,7 @@ min-height: 100vh;
 }
 
 main {
-  background: #1E1E1E;
+  background: #1e1e1e;
 }
 
 .desktopVersion .content article h1::before{
@@ -209,31 +205,30 @@ width: 80%;
   justify-content: center;
 }
 
-.mobileVersion .mobileBody main .mobileContent{
-  background: #191919;
-  margin: 10px;
-  border-radius: 10px;
+.mobileVersion .mobileBody main article{
+  background: #fff;
   min-height: 100vh;
+  text-align: justify;
+  padding: 0 5vw 0 5vw;
 }
 
-.mobileVersion .mobileBody main .mobileContent h1{
+.mobileVersion .mobileBody main article h1{
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  color: #00DE28;
   font-size: 2em;
-  line-height: 1px;
+  font-weight: bold;
+  color:black;
+  position: relative;
+  z-index: 1;
 }
 
-.mobileVersion .mobileBody main .mobileContent h2{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  color: #2B9B3F;
-  font-size: 1em;
-}
-
-.mobileVersion .mobileBody main .mobileContent hr{
-  margin-left: 20px;
-  margin-right: 20px;
+.mobileVersion .mobileBody main article h1::before{
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  width: 70%;
+  height: 5px;
+  background: rgb(255, 236, 66);
+  z-index: -1;
 }
 
 .mobileVersion .mobileBody main .mobileContent .text{
@@ -241,7 +236,7 @@ width: 80%;
   margin-right: 20px;
   text-align: justify;
   text-justify: inter-word;
-  color: #ECDBBA;
+  color: #000;
 }
 
 .mobileFooter{
