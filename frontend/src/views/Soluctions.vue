@@ -33,7 +33,7 @@
                 Se quiser me ajudar fazendo uma doação, escolha a opção que melhor se encaixa para você utilizando o formulário abaixo e doe o quanto quiser!
               </p>
               <form action="" class="getDonationForm">
-                <select name="donationForm" id="" v-model="state.donationOption">
+                <select name="donationForm" id="" v-model="state.donationOption" class="donationSelector">
                   <option value="pix" selected>Pix</option>
                   <option value="picpay">PicPay</option>
                   <option value="TEDDOC">TED/DOC</option>
