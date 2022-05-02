@@ -11,7 +11,7 @@
             <h1>Me ajude a ir para a califórnia</h1>
             <div class="text">
               <p>
-                Olá, meu nome é Augusto e eu preciso da sua ajuda conseguir fazer o curso de Digital Companies & E-business Revolution na California State University, Northridge, Estados Unidos. Se quiser saber um pouco da minha história, é só seguir lendo os parágrafos abaixo.
+                Olá, meu nome é Augusto e eu preciso da sua ajuda para conseguir fazer o curso de Digital Companies & E-business Revolution na California State University, Northridge, Estados Unidos. Se quiser saber um pouco da minha história, é só seguir lendo os parágrafos abaixo.
               </p>
               <p>
                 Como já disse meu nome, vou pular logo para a minha trajetória.
