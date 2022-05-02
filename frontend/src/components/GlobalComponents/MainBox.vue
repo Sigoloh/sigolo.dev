@@ -26,13 +26,13 @@
           </span>
        </div>
       </router-link>
-      <router-link class="asideButton" to="/contato">
+      <a href="mailto:augustoasigolo@gmail.com" class="asideButton">
        <div class="buttonContent">
           <span>
             Contato
           </span>
        </div>
-      </router-link>
+      </a>
       </div>
       <div class="asideFooter">
         <a href="https://github.com/Sigoloh/" target="_blank"><img src="../../assets/github.png" alt="github icon"></a>
