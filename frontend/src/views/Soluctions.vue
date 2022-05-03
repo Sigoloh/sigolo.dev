@@ -168,7 +168,7 @@ import UpperMenu from '../components/GlobalComponents/UpperMenu.vue';
 import MobileFooter from '../components/GlobalComponents/MobileFooter.vue';
 
 export default {
-  setup() {
+  async setup() {
     const state = reactive({
       donationOption: 'pix',
     });
