@@ -44,6 +44,7 @@
                 <h3>Pix</h3>
                 <p>Se quiser doar utilizando o Pix, use o QR code abaixo, ou copie a chave pix clicando <span class="keyButton" @click="copiar()">aqui</span></p>
                 <img src="../assets/QRPix.png" alt="00020101021126580014br.gov.bcb.pix013650325e70-51d3-4ad6-b706-5fb5368ead395204000053039865802BR5924AUGUSTO DOS ANJOS SIGOLO6009SAO PAULO622905251G1NHK32GK14T7ZV1RDCYD14V63048899" class="qrCode">
+                <p>Caso o botão de copiar o pix não funcione, a chave é <span class="keyButton">50325e70-51d3-4ad6-b706-5fb5368ead39</span></p>
               </div>
               <div class="donationWay" v-if="state.donationOption === 'picpay'">
                 <h3>PicPay</h3>
@@ -121,6 +122,7 @@
                 <h3>Pix</h3>
                 <p>Se quiser doar utilizando o Pix, use o QR code abaixo, ou copie a chave pix clicando <span class="keyButton" @click="copiar()">aqui</span></p>
                 <img src="../assets/QRPix.png" alt="00020101021126580014br.gov.bcb.pix013650325e70-51d3-4ad6-b706-5fb5368ead395204000053039865802BR5924AUGUSTO DOS ANJOS SIGOLO6009SAO PAULO622905251G1NHK32GK14T7ZV1RDCYD14V63048899" class="qrCodeMobile">
+                <p>Caso o botão de copiar o pix não funcione, a chave é <span class="keyButton">50325e70-51d3-4ad6-b706-5fb5368ead39</span></p>
               </div>
               <div class="donationWay" v-if="state.donationOption === 'picpay'">
                 <h3>PicPay</h3>
