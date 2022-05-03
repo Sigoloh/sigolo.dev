@@ -88,7 +88,7 @@
             <h1>Me ajude a ir para a califórnia</h1>
             <div class="text">
               <p>
-                Olá, meu nome é Augusto e eu preciso da sua ajuda conseguir fazer o curso de Digital Companies & E-business Revolution na Universidade de La Verne, que fica na Califórnia, Estados Unidos. Se quiser saber um pouco da minha história, é só seguir lendo os parágrafos abaixo.
+                Olá, meu nome é Augusto e eu preciso da sua ajuda para conseguir fazer o curso de Digital Companies & E-business Revolution na Universidade de La Verne, que fica na Califórnia, Estados Unidos. Se quiser saber um pouco da minha história, é só seguir lendo os parágrafos abaixo.
               </p>
               <p>
                 Como já disse meu nome, vou pular logo para a minha trajetória.
@@ -145,7 +145,7 @@
               </div>
 
               <p>
-                Toda ajuda é bem-vinda, se quiser me ajudar compartilhando minha história e insentivando seus amigos a doarem qualquer quantia para fazer essa viagem possível, sinta-se a vontade de compartilhar o link desse site com eles, ou me seguir nas redes sociais como, Instangram e TikTok, onde postarei atualizações do meu intercâmbio.
+                Toda ajuda é bem-vinda, se quiser me ajudar compartilhando minha história e incentivando seus amigos a doarem qualquer quantia para fazer essa viagem possível, sinta-se a vontade de compartilhar o link desse site com eles, ou me seguir nas redes sociais como, Instangram e TikTok, onde postarei atualizações do meu intercâmbio.
               </p>
               <ul>
                 <li>Instagram: @belchsigolo</li>
