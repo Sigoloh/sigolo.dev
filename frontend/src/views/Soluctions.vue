@@ -168,17 +168,12 @@ import UpperMenu from '../components/GlobalComponents/UpperMenu.vue';
 import MobileFooter from '../components/GlobalComponents/MobileFooter.vue';
 
 export default {
-  async setup() {
+  setup() {
     const state = reactive({
       donationOption: 'pix',
     });
 
     async function copiar() {
-      try {
-        navigator.clipboard.writeText('Teste');
-      } catch (error) {
-        alert(error);
-      }
       // await navigator.clipboard.writeText(
       // '00020101021126580014br.gov.bcb.pix
       // 013650325e70-51d3-4ad6-b706-5fb5368ead395204000053039865802BR5924
