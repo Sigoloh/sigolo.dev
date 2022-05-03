@@ -175,15 +175,10 @@ export default {
 
     async function copiar() {
       try {
-        await navigator.clipboard.writeText('Teste');
+        await navigator.clipboard.writeText('00020101021126580014br.gov.bcb.pix013650325e70-51d3-4ad6-b706-5fb5368ead395204000053039865802BR5924AUGUSTO DOS ANJOS SIGOLO6009SAO PAULO622905251G1NHK32GK14T7ZV1RDCYD14V63048899');
       } catch (erro) {
         alert(erro);
       }
-      // await navigator.clipboard.writeText(
-      // '00020101021126580014br.gov.bcb.pix
-      // 013650325e70-51d3-4ad6-b706-5fb5368ead395204000053039865802BR5924
-      // AUGUSTO DOS ANJOS SIGOLO6009SAO PAULO622905251G1NHK32GK14T7ZV1RDCYD14V63048899'
-      // ).then(() => alert('Pix copiado!'));
     }
 
     return {
