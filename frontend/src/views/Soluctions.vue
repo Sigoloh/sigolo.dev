@@ -42,7 +42,7 @@
               </form>
               <div class="donationWay" v-if="state.donationOption === 'pix'">
                 <h3>Pix</h3>
-                <p>Se quiser doar utilizando o Pix, use o QR code abaixo, ou copie a chave pix clicando <span class="keyButton" @click="copiar">aqui</span></p>
+                <p>Se quiser doar utilizando o Pix, use o QR code abaixo, ou copie a chave pix clicando <span class="keyButton" @click="copiar()">aqui</span></p>
                 <img src="../assets/QRPix.png" alt="00020101021126580014br.gov.bcb.pix013650325e70-51d3-4ad6-b706-5fb5368ead395204000053039865802BR5924AUGUSTO DOS ANJOS SIGOLO6009SAO PAULO622905251G1NHK32GK14T7ZV1RDCYD14V63048899" class="qrCode">
               </div>
               <div class="donationWay" v-if="state.donationOption === 'picpay'">
@@ -119,7 +119,7 @@
               </form>
               <div class="donationWay" v-if="state.donationOption === 'pix'">
                 <h3>Pix</h3>
-                <p>Se quiser doar utilizando o Pix, use o QR code abaixo, ou copie a chave pix clicando <span class="keyButton" @click="copiar">aqui</span></p>
+                <p>Se quiser doar utilizando o Pix, use o QR code abaixo, ou copie a chave pix clicando <span class="keyButton" @click="copiar()">aqui</span></p>
                 <img src="../assets/QRPix.png" alt="00020101021126580014br.gov.bcb.pix013650325e70-51d3-4ad6-b706-5fb5368ead395204000053039865802BR5924AUGUSTO DOS ANJOS SIGOLO6009SAO PAULO622905251G1NHK32GK14T7ZV1RDCYD14V63048899" class="qrCodeMobile">
               </div>
               <div class="donationWay" v-if="state.donationOption === 'picpay'">
@@ -149,7 +149,6 @@
               </p>
               <ul>
                 <li>Instagram: @belchsigolo</li>
-                <li>Tiktok: @belchsigolo</li>
               </ul>
             </div>
           </article>
@@ -174,8 +173,13 @@ export default {
       donationOption: 'pix',
     });
 
-    function copiar() {
-      navigator.clipboard.writeText('00020101021126580014br.gov.bcb.pix013650325e70-51d3-4ad6-b706-5fb5368ead395204000053039865802BR5924AUGUSTO DOS ANJOS SIGOLO6009SAO PAULO622905251G1NHK32GK14T7ZV1RDCYD14V63048899');
+    async function copiar() {
+      alert(window.isSecureContext);
+      // await navigator.clipboard.writeText(
+      // '00020101021126580014br.gov.bcb.pix
+      // 013650325e70-51d3-4ad6-b706-5fb5368ead395204000053039865802BR5924
+      // AUGUSTO DOS ANJOS SIGOLO6009SAO PAULO622905251G1NHK32GK14T7ZV1RDCYD14V63048899'
+      // ).then(() => alert('Pix copiado!'));
     }
 
     return {
