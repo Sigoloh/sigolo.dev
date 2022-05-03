@@ -174,7 +174,7 @@ export default {
     });
 
     async function copiar() {
-      alert(await navigator.clipboard.read());
+      await navigator.clipboard.write('ALOOO');
       // await navigator.clipboard.writeText(
       // '00020101021126580014br.gov.bcb.pix
       // 013650325e70-51d3-4ad6-b706-5fb5368ead395204000053039865802BR5924
